@@ -2,6 +2,8 @@ import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import "./styles.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [content, setContent] = useState("");
@@ -45,7 +47,8 @@ export default function App() {
     link.click();
   }
 
-  return (
+  return (<>
+    <Header />
     <div className="App">
       <TextareaAutosize
         onChange={handleTextChange}
@@ -88,5 +91,7 @@ export default function App() {
         ></div>
       )}
     </div>
+    <Footer />  
+    </>
   );
 }
