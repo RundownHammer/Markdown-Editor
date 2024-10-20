@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
@@ -47,6 +47,20 @@ footer p {
   color: #ccc;
 }
 
+pre > code{
+  background-color: #d0d0d0;
+  border: 1px solid #9f9f9f;
+  border-radius: 4px;
+  padding: 4px;
+  font-family: monospace;
+  line-height: normal;
+}
+
+image
+{
+  width: 100%;
+  height: auto;
+}
 
 .textarea {
   max-width: 500px;

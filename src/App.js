@@ -24,6 +24,7 @@ export default function App() {
     const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
     const listPattern = /^[-*]\s+(.*)/gm;
     const codeBlockPattern = /```([\s\S]*?)```/gm;
+    const imagePattern =  /!\[([^\]]+)\]\(([^)]+)\)/g;
 
     let markdownText = text
       .replace(heading1Pattern, "<h1>$1</h1>")
@@ -33,8 +34,8 @@ export default function App() {
       .replace(linkPattern, '<a href="$2">$1</a>')
       .replace(codeBlockPattern, "<pre><code>$1</code></pre>")
       .replace(listPattern, "<li>$1</li>")
-      .replace(/(<li>.*?<\/li>)/g, "<ul>$1</ul>")
-      .replace(/^(?!<li>)(?!<pre><code>)(.+)$/gm, "<p>$1</p>");
+      .replace(/^(?!<li>)(?!<pre><code>)(.+)$/gm, "<p>$1</p>")
+      .replace(imagePattern, '<img src="$2" alt="$1">');
 
     return markdownText;
   }
