@@ -1,7 +1,7 @@
-# ![Markdown Editor](https://markdown-editor2024.netlify.app)
+# [Markdown Editor](https://markdown-editor2024.netlify.app)
 
 A simple and intuitive Markdown editor built to create, edit, and preview Markdown content in real time.
-
+Site can be accessed [here](https://markdown-editor2024.netlify.app).
 ## Features
 
 - **Live Preview:** Instantly see rendered Markdown as you type.
